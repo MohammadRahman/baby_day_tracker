@@ -1,0 +1,191 @@
+@import 'tailwindcss';
+
+/* Baby Tracker - Cool Modern Design System
+   Primary: Soft Blue, Secondary: Light Gray, Background: White/Off-white
+   All colors in HSL format
+*/
+@theme {
+  /* Background colors */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  
+  /* Primary colors */
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  
+  /* Secondary colors */
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  
+  /* Muted colors */
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  
+  /* Accent colors */
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  
+  /* Destructive colors */
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  
+  /* Border and input */
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  
+  /* Feature-specific colors */
+  --color-sleep: hsl(var(--sleep));
+  --color-sleep-light: hsl(var(--sleep-light));
+  --color-bottles: hsl(var(--bottles));
+  --color-bottles-light: hsl(var(--bottles-light));
+  --color-diapers: hsl(var(--diapers));
+  --color-diapers-light: hsl(var(--diapers-light));
+  --color-nursing: hsl(var(--nursing));
+  --color-nursing-light: hsl(var(--nursing-light));
+  --color-pumping: hsl(var(--pumping));
+  --color-pumping-light: hsl(var(--pumping-light));
+  --color-doctor: hsl(var(--doctor));
+  --color-doctor-light: hsl(var(--doctor-light));
+  
+  /* Border radius */
+  --radius: 0.75rem;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  :root {
+    /* Cool modern palette - soft blue accent */
+    --background: 210 20% 98%;
+    --foreground: 220 20% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 20%;
+
+    /* Primary: Soft blue */
+    --primary: 213 94% 68%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light cool gray */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 20% 30%;
+
+    /* Muted: Subtle gray */
+    --muted: 210 15% 94%;
+    --muted-foreground: 220 10% 50%;
+
+    /* Accent: Slightly darker blue for highlights */
+    --accent: 213 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 213 94% 68%;
+
+    --radius: 0.75rem;
+
+    /* Feature-specific colors */
+    --sleep: 250 80% 70%;
+    --sleep-light: 250 80% 95%;
+    --bottles: 30 90% 65%;
+    --bottles-light: 30 90% 95%;
+    --diapers: 340 70% 65%;
+    --diapers-light: 340 70% 95%;
+    --nursing: 160 60% 50%;
+    --nursing-light: 160 60% 95%;
+    --pumping: 280 60% 65%;
+    --pumping-light: 280 60% 95%;
+    --doctor: 200 80% 55%;
+    --doctor-light: 200 80% 95%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 210 20% 95%;
+
+    --card: 220 20% 14%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 220 20% 14%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 213 94% 68%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 213 80% 60%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 213 94% 68%;
+
+    --sleep: 250 70% 65%;
+    --sleep-light: 250 30% 20%;
+    --bottles: 30 80% 60%;
+    --bottles-light: 30 30% 20%;
+    --diapers: 340 60% 60%;
+    --diapers-light: 340 30% 20%;
+    --nursing: 160 50% 45%;
+    --nursing-light: 160 30% 20%;
+    --pumping: 280 50% 60%;
+    --pumping-light: 280 30% 20%;
+    --doctor: 200 70% 50%;
+    --doctor-light: 200 30% 20%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    /* @apply border-border; */
+  }
+
+  body {
+    /* @apply bg-background text-foreground antialiased; */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .timer-display {
+    font-variant-numeric: tabular-nums;
+  }
+}
